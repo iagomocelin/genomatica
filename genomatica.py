@@ -10,17 +10,17 @@ def fastaInput():
             print("#####################################################")
             print("-----------------------------------------------------\n")
             print(f"-> SEQUENCE:\n{sequence.id}\n")
-            translate(sequence.seq)
+            translation(sequence.seq)
     id = None
 
 # MANIPULATING A STRING INPUT
 def stringInput():
     sequence = Seq(input("\nInsert the dNTP sequence you wish to translate:\n").upper())
     if sequence:
-        translate(sequence)
+        translation(sequence)
 
 # TRANSLATION ALGORITHM
-def translate(sequence):
+def translation(sequence):
     max = 0
     
     ### READING THE 3 FRAMES ON THE FORWARD STRAND 
